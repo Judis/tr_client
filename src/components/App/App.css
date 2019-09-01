@@ -1,0 +1,13 @@
+body{
+    background-color: #F0F2F5;
+}
+.content-col{
+    margin-top: 4rem;
+}
+.logo-container{
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.logo-container img{
+    width: 65%;
+}

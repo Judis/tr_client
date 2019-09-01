@@ -1,0 +1,13 @@
+.footer-form-links{
+    height: 12px;
+    padding-bottom: 20px;
+}
+.footer-form-links a{
+    font-size: 12px;
+}
+.footer-form-links .left{
+    float: left;
+}
+.footer-form-links .right{
+    float: right;
+}
