@@ -1,0 +1,80 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+        "plugin:react/recommended"
+    ],
+    "settings": {
+        "react": {
+            "pragma": "React",  // Pragma to use, default to "React"
+            "version": "detect"
+        }
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/prop-types": 0,
+        "react/prefer-stateless-function": ["error"],
+        "react/jsx-closing-bracket-location": ["error"],
+        "react/jsx-closing-tag-location": ["error"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "react/jsx-tag-spacing": ["error"],
+        "react/jsx-curly-spacing": ["error", {"when": "never"}],
+        "react/jsx-boolean-value": ["error"],
+        "react/jsx-wrap-multilines": ["error"],
+        "react/self-closing-comp": ["error"],
+        "react/no-is-mounted": ["error"],
+        "react/sort-comp": ["error", {
+            "order": [
+                "static-methods",
+                "lifecycle",
+                "everything-else",
+                "render"
+            ],
+            "groups": {
+                "lifecycle": [
+                    "displayName",
+                    "propTypes",
+                    "contextTypes",
+                    "childContextTypes",
+                    "mixins",
+                    "statics",
+                    "defaultProps",
+                    "constructor",
+                    "getDefaultProps",
+                    "state",
+                    "getInitialState",
+                    "getChildContext",
+                    "getDerivedStateFromProps",
+                    "componentWillMount",
+                    "UNSAFE_componentWillMount",
+                    "componentDidMount",
+                    "componentWillReceiveProps",
+                    "UNSAFE_componentWillReceiveProps",
+                    "shouldComponentUpdate",
+                    "componentWillUpdate",
+                    "UNSAFE_componentWillUpdate",
+                    "getSnapshotBeforeUpdate",
+                    "componentDidUpdate",
+                    "componentDidCatch",
+                    "componentWillUnmount"
+                ]
+            }
+        }]
+    }
+}

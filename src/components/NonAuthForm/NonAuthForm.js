@@ -6,11 +6,13 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import './NonAuthForm.css'
 
 function NonAuthForm() {
-		return <Router>
+		return (
+			<Router>
 				<Route path="/restore_password" component={RestorePassword} />
 				<Route path="/signup" component={Signup} />
 				<Route path="/(|signin)" component={Signin} />
-		</Router>
+			</Router>
+		)
 }
 
 export default NonAuthForm

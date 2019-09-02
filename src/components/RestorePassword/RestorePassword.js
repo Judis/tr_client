@@ -17,7 +17,7 @@ class RestorePassword extends Component {
 		const { getFieldDecorator } = this.props.form;
 		return (
 			<Fragment>
-				<HeaderNonAuthForm title="Restore Password"/>
+				<HeaderNonAuthForm title="Restore Password" />
 				<div className="form-container">
 					<Form onSubmit={this.handleSubmit} className="form-restore-password non-auth-form">
 						<Form.Item>
@@ -45,6 +45,6 @@ class RestorePassword extends Component {
 			</Fragment>
 		);
 	}
-}
+};
 
 export default Form.create({ name: 'forgot_password' })(RestorePassword);

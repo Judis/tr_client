@@ -82,6 +82,6 @@ class Signup extends Component {
 			</Fragment>
 		);
 	}
-}
+};
 
 export default Form.create({ name: 'signup' })(Signup);

@@ -1,12 +1,19 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './HeaderNonAuthForm.css'
 
-function HeaderNonAuthForm (props) {
+const propTypes = {
+	title: PropTypes.string.isRequired
+};
+
+function HeaderNonAuthForm ({title}) {
 	return (
 		<div className="form-header">
-			<h4>{props.title}</h4>
+			<h4>{title}</h4>
 		</div>
 	)
-}
+};
 
-export default HeaderNonAuthForm
+HeaderNonAuthForm.propTypes = propTypes;
+
+export default HeaderNonAuthForm;

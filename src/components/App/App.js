@@ -1,9 +1,9 @@
 import React from 'react';
 import NonAuthForm from '../NonAuthForm/NonAuthForm';
 import {LOGO_URL} from "../../util/const";
-import { Row, Col } from 'antd';
+import {Row, Col} from 'antd';
 import 'antd/dist/antd.css';
-import './App.css'
+import './App.css';
 
 function App() {
   return (
@@ -24,13 +24,14 @@ function App() {
           <div className="logo-container">
             <img
               src={LOGO_URL}
-              alt="Logo"/>
+              alt="Logo"
+            />
           </div>
           <NonAuthForm />
         </Col>
       </Row>
     </div>
   );
-}
+};
 
 export default App;

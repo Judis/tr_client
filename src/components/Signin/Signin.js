@@ -56,6 +56,6 @@ class Signin extends Component {
 			</Fragment>
 		);
 	}
-}
+};
 
 export default Form.create({ name: 'signin' })(Signin);
