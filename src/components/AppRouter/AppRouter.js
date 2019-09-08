@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import NonAuthPages from "../NonAuthPages/NonAuthPages";
+import { routes } from "../routes";
 
-function AppRouter({ routes }) {
+function AppRouter() {
   return (
     <Router>
       {routes
