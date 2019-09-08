@@ -1,0 +1,14 @@
+.form-button {
+  width: 100%;
+  display: block;
+  background-color: var(--light-blue);
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid var(--light-blue);
+  padding: 5px 2px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  color: var(--white);
+}

@@ -1,0 +1,9 @@
+.form-header {
+  border-bottom: 2px solid var(--light-gray);
+  background-color: var(--white);
+  padding: 20px;
+}
+.form-header p {
+  margin: 0;
+  font-weight: bold;
+}

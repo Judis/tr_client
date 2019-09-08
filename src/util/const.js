@@ -1,1 +1,0 @@
-export const LOGO_URL = "https://staging.channex.io/static/media/logo__color.eed5def4.svg";

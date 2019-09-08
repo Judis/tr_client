@@ -1,50 +1,40 @@
-import React, {Component, Fragment} from "react";
-import { Form, Icon, Input, Button} from 'antd';
-import HeaderNonAuthForm from "../HeaderNonAuthForm/HeaderNonAuthForm";
-import FooterNonAuthForm from "../FooterNonAuthForm/FooterNonAuthForm";
+import React, { Fragment } from "react";
+import NonAuthFormHeader from "../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
+import NonAuthFormFooter from "../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
+import FormContainer from "../FormComponents/FormContainer/FormContainer";
+import InputComponent from "../FormComponents/InputComponent/InputComponent";
+import ButtonComponent from "../FormComponents/ButtonComponent/ButtonComponent";
+import { getUrlByAlias } from "../routes";
 
-class RestorePassword extends Component {
-	handleSubmit = e => {
-		e.preventDefault();
-		this.props.form.validateFields((err, values) => {
-			if (!err) {
-				console.log('Received values of form: ', values);
-			}
-		});
-	};
+function RestorePassword() {
+  const footerLinks = [
+    {
+      url: getUrlByAlias("signin"),
+      title: "Sign In"
+    },
+    {
+      url: getUrlByAlias("signup"),
+      title: "Sign Up"
+    }
+  ];
 
-	render() {
-		const { getFieldDecorator } = this.props.form;
-		return (
-			<Fragment>
-				<HeaderNonAuthForm title="Restore Password" />
-				<div className="form-container">
-					<Form onSubmit={this.handleSubmit} className="form-restore-password non-auth-form">
-						<Form.Item>
-							{getFieldDecorator('email', {
-								rules: [
-									{ required: true, message: 'Please input your email!' },
-									{ type: 'email', message: 'Incorrect email format!'}
-								],
-							})(
-								<Input
-									prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
-									placeholder="Email"
-									type="email"
-								/>,
-							)}
-						</Form.Item>
-						<Form.Item>
-							<Button type="primary" htmlType="submit" className="submit-form-button">
-								<Icon type="lock" /> Restore password
-							</Button>
-						</Form.Item>
-					</Form>
-					<FooterNonAuthForm page="restore_password" />
-				</div>
-			</Fragment>
-		);
-	}
-};
+  return (
+    <Fragment>
+      <NonAuthFormHeader title="Forgot Password?" />
+      <FormContainer>
+        <form className="form-password-restore">
+          <InputComponent
+            icon="mail"
+            name="email"
+            type="email"
+            placeholder="Email"
+          />
+          <ButtonComponent icon="user" title="Restore Password" type="button" />
+        </form>
+      </FormContainer>
+      <NonAuthFormFooter footerLinks={footerLinks} />
+    </Fragment>
+  );
+}
 
-export default Form.create({ name: 'forgot_password' })(RestorePassword);
+export default RestorePassword;
