@@ -1,9 +1,9 @@
-.form-header {
-  border-bottom: 2px solid var(--light-gray);
-  background-color: var(--white);
+.form_header {
+  border-bottom: 2px solid var(--body-background-color);
+  background-color: var(--form-background-color);
   padding: 20px;
 }
-.form-header p {
+.form_header_text {
   margin: 0;
   font-weight: bold;
 }

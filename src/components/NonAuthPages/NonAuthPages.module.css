@@ -1,7 +1,7 @@
-.non-auth-logo-container {
+.non_auth_logo_container {
   text-align: center;
   margin: 40px 0 20px 0;
 }
-.non-auth-logo {
+.non_auth_logo {
   max-width: 200px;
 }

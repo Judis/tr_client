@@ -4,10 +4,10 @@ import styles from "./NonAuthFormFooter.module.css";
 
 function NonAuthFormFooter({ footerLinks }) {
   return (
-    <div className={styles["footer-form-links"]}>
+    <div className={styles.footer_form_links}>
       {footerLinks.map((link, i) => {
         return (
-          <Link key={i} className={styles["footer-link"]} to={link.url}>
+          <Link key={i} className={styles.footer_link} to={link.url}>
             {link.title}
           </Link>
         );

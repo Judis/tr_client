@@ -1,11 +1,11 @@
-.footer-form-links {
-  background-color: var(--white);
+.footer_form_links {
+  background-color: var(--form-background-color);
   padding: 0 20px 20px 20px;
   display: flex;
   justify-content: space-between;
   display: -webkit-flex;
   -webkit-justify-content: space-between;
 }
-.footer-link {
+.footer_link {
   font-size: 12px;
 }

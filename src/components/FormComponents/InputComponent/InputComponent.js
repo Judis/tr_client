@@ -5,14 +5,14 @@ import styles from "./InputComponent.module.css";
 function InputComponent(props) {
   const { name, type, placeholder, icon } = props;
   const inputClass = icon
-    ? styles["form-input"] + " " + styles["with-prefix"]
-    : styles["form-input"];
+    ? styles.form_input + " " + styles.with_prefix
+    : styles.form_input;
 
   return (
-    <div className={styles["form-input-container"]}>
+    <div className={styles.form_input_container}>
       {icon && (
-        <span className={styles["form-input-prefix"]}>
-          <Icon type={icon} className={styles["input-icon"]} />
+        <span className={styles.form_input_prefix}>
+          <Icon type={icon} className={styles.input_icon} />
         </span>
       )}
       <input

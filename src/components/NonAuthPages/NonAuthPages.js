@@ -10,9 +10,9 @@ function NonAuthPages({ component: Component, ...rest }) {
       render={() => (
         <Row type="flex" justify="space-around" align="middle">
           <Col xl={6} lg={9} md={12} sm={12} xs={18}>
-            <div className={styles["non-auth-logo-container"]}>
+            <div className={styles.non_auth_logo_container}>
               <img
-                className={styles["non-auth-logo"]}
+                className={styles.non_auth_logo}
                 src="/img/logo.svg"
                 alt="Logo"
               />
