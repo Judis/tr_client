@@ -1,8 +1,8 @@
 import React from "react";
 import AppRouter from "../AppRouter/AppRouter";
+import "antd/dist/antd.css";
 import "./variables.css";
 import "./App.css";
-import "antd/dist/antd.css";
 
 function App() {
   return <AppRouter />;
