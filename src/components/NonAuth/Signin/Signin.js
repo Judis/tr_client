@@ -1,16 +1,11 @@
 import React, { Fragment } from "react";
-import { Formik } from "formik";
-import { withRouter } from "react-router-dom";
 import NonAuthFormHeader from "../../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
 import NonAuthFormFooter from "../../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
 import FormContainer from "../../FormComponents/FormContainer/FormContainer";
 import SigninForm from "../Forms/SignInForm";
-import { signinMockRequest, signinRequest } from "../../../server/apiRequest";
-import signinHandler from "../../../server/responseHandlers/signinHandler";
 import { getUrlByAlias } from "../../routes";
-import { SigninSchema } from "../../validators";
 
-function Signin({ history }) {
+function Signin() {
   const footerLinks = [
     {
       url: getUrlByAlias("signup"),
@@ -26,20 +21,11 @@ function Signin({ history }) {
     <Fragment>
       <NonAuthFormHeader title="Sign In" />
       <FormContainer>
-        <Formik
-          initialValues={{ email: "", password: "" }}
-          validationSchema={SigninSchema}
-          onSubmit={(values, { setSubmitting }) => {
-            signinMockRequest(values)
-              .then(response => signinHandler(response, history))
-              .then(() => setSubmitting(false));
-          }}
-          component={SigninForm}
-        />
+        <SigninForm />
       </FormContainer>
       <NonAuthFormFooter footerLinks={footerLinks} />
     </Fragment>
   );
 }
 
-export default withRouter(Signin);
+export default Signin;
