@@ -1,7 +1,6 @@
 .form_input {
   display: block;
   width: 100%;
-  margin-bottom: 25px;
   padding: 5px 10px;
   font-size: 12px;
   height: 30px;
@@ -15,6 +14,7 @@
 }
 .form_input_container {
   position: relative;
+  margin-bottom: 25px;
 }
 .with_prefix {
   padding-left: 30px;

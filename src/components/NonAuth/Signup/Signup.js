@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import NonAuthFormHeader from "../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
-import NonAuthFormFooter from "../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
-import FormContainer from "../FormComponents/FormContainer/FormContainer";
-import InputComponent from "../FormComponents/InputComponent/InputComponent";
-import ButtonComponent from "../FormComponents/ButtonComponent/ButtonComponent";
-import { getUrlByAlias } from "../routes";
+import NonAuthFormHeader from "../../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
+import NonAuthFormFooter from "../../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
+import FormContainer from "../../FormComponents/FormContainer/FormContainer";
+import InputComponent from "../../FormComponents/InputComponent/InputComponent";
+import ButtonComponent from "../../FormComponents/ButtonComponent/ButtonComponent";
+import { getUrlByAlias } from "../../routes";
 
 function Signup() {
   const footerLinks = [

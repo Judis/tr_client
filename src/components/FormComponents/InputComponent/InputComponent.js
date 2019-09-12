@@ -1,9 +1,10 @@
 import React from "react";
 import { Icon } from "antd";
 import styles from "./InputComponent.module.css";
+import InputErrorComponent from "../InputErrorComponent/InputErrorComponent";
 
-function InputComponent(props) {
-  const { name, type, placeholder, icon } = props;
+function InputComponent({ field, form: { touched, errors }, ...props }) {
+  const { placeholder, icon } = props;
   const inputClass = icon
     ? styles.form_input + " " + styles.with_prefix
     : styles.form_input;
@@ -16,13 +17,15 @@ function InputComponent(props) {
         </span>
       )}
       <input
-        type={type}
+        {...field}
+        {...props}
         autoComplete="off"
-        name={name}
-        value=""
         className={inputClass}
         placeholder={placeholder}
       />
+      {touched[field.name] && errors[field.name] && (
+        <InputErrorComponent errorText={errors[field.name]} />
+      )}
     </div>
   );
 }
