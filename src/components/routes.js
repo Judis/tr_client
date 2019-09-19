@@ -1,8 +1,8 @@
 import fp from "lodash/fp";
-import Signup from "./NonAuth/Signup/Signup";
-import Signin from "./NonAuth/Signin/Signin";
-import RestorePassword from "./NonAuth/RestorePassword/RestorePassword";
-import HomePage from "./HomePage/HomePage";
+import Signup from "./NonAuthScope/Signup/Signup";
+import Signin from "./NonAuthScope/Signin/Signin";
+import RestorePassword from "./NonAuthScope/RestorePassword/RestorePassword";
+import HomePage from "./AuthUserScope/HomePage/HomePage";
 
 export const routes = [
   {
@@ -31,7 +31,7 @@ export const routes = [
     component: HomePage,
     exact: true,
     alias: "root",
-    scope: "auth"
+    scope: "userauth"
   }
 ];
 

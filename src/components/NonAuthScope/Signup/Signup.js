@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import NonAuthFormHeader from "../../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
 import NonAuthFormFooter from "../../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
 import FormContainer from "../../FormComponents/FormContainer/FormContainer";
-import InputComponent from "../../FormComponents/InputComponent/InputComponent";
-import ButtonComponent from "../../FormComponents/ButtonComponent/ButtonComponent";
+import InputField from "../../FormComponents/InputField/InputField";
+import SubmitButton from "../../FormComponents/SubmitButton/SubmitButton";
 import { getUrlByAlias } from "../../routes";
 
 function Signup() {
@@ -23,31 +23,26 @@ function Signup() {
       <NonAuthFormHeader title="Sign Up" />
       <FormContainer>
         <form className="form-signup">
-          <InputComponent
+          <InputField
             icon="mail"
             name="email"
             type="email"
             placeholder="Email"
           />
-          <InputComponent
-            icon="user"
-            name="user"
-            type="text"
-            placeholder="Name"
-          />
-          <InputComponent
+          <InputField icon="user" name="user" type="text" placeholder="Name" />
+          <InputField
             icon="lock"
             name="password"
             type="password"
             placeholder="Password"
           />
-          <InputComponent
+          <InputField
             icon="lock"
             name="password_confirmation"
             type="password"
             placeholder="Password Confirmation"
           />
-          <ButtonComponent icon="user" title="Sign Up" type="button" />
+          <SubmitButton icon="user" title="Sign Up" />
         </form>
       </FormContainer>
       <NonAuthFormFooter footerLinks={footerLinks} />
