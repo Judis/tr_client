@@ -1,26 +1,37 @@
-import Signup from "./Signup/Signup";
-import Signin from "./Signin/Signin";
-import RestorePassword from "./RestorePassword/RestorePassword";
 import fp from "lodash/fp";
+import Signup from "./NonAuthScope/Signup/Signup";
+import Signin from "./NonAuthScope/Signin/Signin";
+import RestorePassword from "./NonAuthScope/RestorePassword/RestorePassword";
+import HomePage from "./AuthUserScope/HomePage/HomePage";
 
 export const routes = [
   {
     path: "/signup",
     component: Signup,
+    exact: true,
     alias: "signup",
     scope: "nonauth"
   },
   {
     path: "/signin",
     component: Signin,
+    exact: true,
     alias: "signin",
     scope: "nonauth"
   },
   {
     path: "/restore_password",
     component: RestorePassword,
+    exact: true,
     alias: "pass_restore",
     scope: "nonauth"
+  },
+  {
+    path: "/",
+    component: HomePage,
+    exact: true,
+    alias: "root",
+    scope: "userauth"
   }
 ];
 

@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import NonAuthFormHeader from "../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
-import NonAuthFormFooter from "../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
-import FormContainer from "../FormComponents/FormContainer/FormContainer";
-import InputComponent from "../FormComponents/InputComponent/InputComponent";
-import ButtonComponent from "../FormComponents/ButtonComponent/ButtonComponent";
-import { getUrlByAlias } from "../routes";
+import NonAuthFormHeader from "../../FormComponents/NonAuthFormHeader/NonAuthFormHeader";
+import NonAuthFormFooter from "../../FormComponents/NonAuthFormFooter/NonAuthFormFooter";
+import FormContainer from "../../FormComponents/FormContainer/FormContainer";
+import InputField from "../../FormComponents/InputField/InputField";
+import SubmitButton from "../../FormComponents/SubmitButton/SubmitButton";
+import { getUrlByAlias } from "../../routes";
 
 function RestorePassword() {
   const footerLinks = [
@@ -23,13 +23,13 @@ function RestorePassword() {
       <NonAuthFormHeader title="Forgot Password?" />
       <FormContainer>
         <form className="form-password-restore">
-          <InputComponent
+          <InputField
             icon="mail"
             name="email"
             type="email"
             placeholder="Email"
           />
-          <ButtonComponent icon="user" title="Restore Password" type="button" />
+          <SubmitButton icon="user" title="Restore Password" />
         </form>
       </FormContainer>
       <NonAuthFormFooter footerLinks={footerLinks} />

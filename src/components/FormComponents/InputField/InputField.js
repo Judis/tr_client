@@ -1,12 +1,19 @@
 import React from "react";
 import { Icon } from "antd";
-import styles from "./InputComponent.module.css";
+import styles from "./InputField.module.css";
+import InputErrorMessage from "../InputErrorMessage/InputErrorMessage";
 
-function InputComponent(props) {
-  const { name, type, placeholder, icon } = props;
+function InputField({
+  field,
+  form: { touched, errors },
+  placeholder,
+  icon,
+  type
+}) {
   const inputClass = icon
     ? styles.form_input + " " + styles.with_prefix
     : styles.form_input;
+  const showError = touched[field.name] && errors[field.name];
 
   return (
     <div className={styles.form_input_container}>
@@ -16,15 +23,15 @@ function InputComponent(props) {
         </span>
       )}
       <input
+        {...field}
         type={type}
         autoComplete="off"
-        name={name}
-        value=""
         className={inputClass}
         placeholder={placeholder}
       />
+      {showError && <InputErrorMessage errorText={errors[field.name]} />}
     </div>
   );
 }
 
-export default InputComponent;
+export default InputField;
